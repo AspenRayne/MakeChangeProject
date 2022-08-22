@@ -12,14 +12,13 @@ public class MakeChange {
 
 		System.out.print("Please enter in the amount you are paying for your item: ");
 		double amountRecieved = kb.nextDouble();
-		double amountOwed = amountRecieved - itemAmount;
+		//double amountOwed = amountRecieved - itemAmount;
 
 		if (itemAmount > amountRecieved) {
 			System.out.println("Your item is more than the amount you are paying with.");
 		} else if (itemAmount == amountRecieved) {
 			System.out.println("You paid your item to the exact amount! Have a good day.");
 		} else if (itemAmount < amountRecieved) {
-			// changeOwed(amountOwed);
 			System.out.println("Your change is: " + moneyOwed((amountRecieved - itemAmount) + .001));
 		}
 
@@ -104,6 +103,6 @@ public class MakeChange {
 
 		}
 
-		return result;
+		return result.replace((char)(result.length() -1), '.');
 	}
 }
