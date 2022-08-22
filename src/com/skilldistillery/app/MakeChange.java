@@ -12,8 +12,7 @@ public class MakeChange {
 
 		System.out.print("Please enter in the amount you are paying for your item: ");
 		double amountRecieved = kb.nextDouble();
-		//double amountOwed = amountRecieved - itemAmount;
-
+		
 		if (itemAmount > amountRecieved) {
 			System.out.println("Your item is more than the amount you are paying with.");
 		} else if (itemAmount == amountRecieved) {
@@ -32,70 +31,70 @@ public class MakeChange {
 		if (amountOwed - twenty >= 0) {
 			int twentyOwed = (int) (amountOwed / twenty);
 			if (twentyOwed == 1) {
-				result += "1 Twenty dollar bill, ";
+				result += "1 Twenty dollar bill,";
 			} else {
-				result += twentyOwed + " Twenty dollar bills, ";
+				result += twentyOwed + " Twenty dollar bills,";
 			}
 			amountOwed = amountOwed - (twenty * twentyOwed);
 		}
 		if (amountOwed - ten >= 0) {
 			int tenOwed = (int) (amountOwed / ten);
 			if (tenOwed == 1) {
-				result += " 1 Ten dollar bill, ";
+				result += " 1 Ten dollar bill,";
 			} else {
-				result += tenOwed + " ten dollar bills, ";
+				result += tenOwed + " ten dollar bills,";
 			}
 			amountOwed = amountOwed - (ten * tenOwed);
 		}
 		if (amountOwed - five >= 0) {
 			int fiveOwed = (int) (amountOwed / five);
 			if (fiveOwed == 1) {
-				result += " 1 five dollar bill, ";
+				result += " 1 five dollar bill,";
 			} else {
-				result += fiveOwed + " five dollar bills, ";
+				result += fiveOwed + " five dollar bills,";
 			}
 			amountOwed = amountOwed - (five * fiveOwed);
 		}
 		if (amountOwed - one >= 0) {
 			int oneOwed = (int) (amountOwed / one);
 			if (oneOwed == 1) {
-				result += " 1 one dollar bill, ";
+				result += " 1 one dollar bill,";
 			} else {
-				result += oneOwed + " one dollar bills, ";
+				result += oneOwed + " one dollar bills,";
 			}
 			amountOwed = amountOwed - (one * oneOwed);
 		}
 		if (amountOwed - quarter >= 0) {
 			int quarterOwed = (int) (amountOwed / quarter);
 			if (quarterOwed == 1) {
-				result += " 1 quarter, ";
+				result += " 1 quarter,";
 			} else {
-				result += quarterOwed + " quarters, ";
+				result += quarterOwed + " quarters,";
 			}
 			amountOwed = amountOwed - (quarter * quarterOwed);
 		}
 		if (amountOwed - dime >= 0) {
 			int dimeOwed = (int) (amountOwed / dime);
 			if (dimeOwed == 1) {
-				result += " 1 dime, ";
+				result += " 1 dime,";
 			} else {
-				result += dimeOwed + " dimes, ";
+				result += dimeOwed + " dimes,";
 			}
 			amountOwed = amountOwed - (dime * dimeOwed);
 		}
 		if (amountOwed - nickel >= 0) {
 			int nickelOwed = (int) (amountOwed / nickel);
 			if (nickelOwed == 1) {
-				result += " 1 nickel, ";
+				result += " 1 nickel,";
 			} else {
-				result += nickelOwed + " nickels, ";
+				result += nickelOwed + " nickels,";
 			}
 			amountOwed = amountOwed - (nickel * nickelOwed);
 		}
 		if (amountOwed - penny >= 0) {
 			int pennyOwed = (int) (amountOwed / penny);
 			if (pennyOwed == 1) {
-				result += " 1 penny, ";
+				result += " 1 penny,";
 			} else {
 				result += pennyOwed + " pennies,";
 			}
@@ -103,6 +102,7 @@ public class MakeChange {
 
 		}
 
-		return result.replace((char)(result.length() -1), '.');
+		return result.substring(0, result.length() - 1) + ".";
+		
 	}
 }
