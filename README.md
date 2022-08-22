@@ -9,8 +9,8 @@ It calculates it accurately so the user doesnt have to worry about if they are g
 
 ## What I Learned
 I learned how useful casting can be when dealing with decimals.
-I also learned that operating with doubles can have many decimal points, which can cause the outcome to be inaccurate.
-As well as adding 0.001 can fix inaccuracies with decimal places.
+I also learned that operating with doubles can have many decimal points, which can cause the outcome to be inaccurate;
+adding 0.001 can fix inaccuracies with decimal places.
 
 
 ## Technologies used
